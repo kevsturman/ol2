@@ -1,7 +1,7 @@
 import { build } from "esbuild";
 
 const entryPoints = [
-
+                "OpenLayers.js",
                 "OpenLayers/BaseTypes/Class.js",
                 "OpenLayers/Util.js",
                 "OpenLayers/Util/vendorPrefix.js",
@@ -288,7 +288,7 @@ const entryPoints = [
                 "OpenLayers/WPSProcess.js"
 ];
 
-const olBanner = `window.OpenLayers = {};`
+//const olBanner = `window.OpenLayers = {};`
 
 build({
             stdin: {
@@ -300,7 +300,7 @@ build({
         },
         bundle: true,
         outfile: "OpenLayers-dev.js",
-        banner: { js: olBanner },
+        //banner: { js: olBanner },
         sourcemap: true,
         minify: true,
         //globalName: "OpenLayers"
